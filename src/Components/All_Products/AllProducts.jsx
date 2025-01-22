@@ -23,15 +23,7 @@ const AllProducts = () => {
             description={product.description}
           />
         ))}
-        {products?.map((product) => (
-          <CardComponent
-            key={product.id}
-            title={product.title}
-            image={product.image}
-            price={product.price}
-            description={product.description}
-          />
-        ))}
+        
         
       </div>
   )
