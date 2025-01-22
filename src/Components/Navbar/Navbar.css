@@ -1,0 +1,64 @@
+/* General styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    /* background: black; */
+  }
+  
+  .navbar-container {
+    display: flex;
+    flex-direction: column;
+    background-color: #141414;
+    padding: 10px 20px;
+
+    /* position: fixed; Fix the navbar to the top */
+    /* top: 0; Stay at the top */
+    /* left: 0; Align to the left edge */
+    /* width: 100%; Make it full width */
+    /* z-index: 1000; Ensure it's on top of other content */
+     /* Optional: Background color for the navbar */
+    /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); Optional: Add some shadow to the navbar */
+  }
+  
+  /* Top navbar */
+  .navbar-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .navbar-brand-store {
+    font-size: 26px;
+    font-weight: bold;
+    color: #a9afc3;
+    cursor: pointer;
+  }
+  
+  .navbar-icons {
+    display: flex;
+    gap: 74px;
+  }
+  
+  .icon-link-search {
+    color: #a9afc3;
+    text-decoration: none;
+    font-size: 18px;
+    cursor: pointer;
+    /* margin-right: 20px; */
+  }
+
+  .icon-link-cart {
+    color: #a9afc3;
+    text-decoration: none;
+    font-size: 18px;
+    cursor: pointer;
+    /* margin-right: 20px; */
+  }
+  
+  
+  /* Responsive design */
+  @media (max-width: 768px) {
+    .navbar-icons {
+      gap: 74px;
+    }
+    }

@@ -1,0 +1,113 @@
+.container-div {
+    display: flex;
+    flex-direction: column;
+    background-color: #141414;
+    padding: 10px 20px;
+}
+
+/* Center heading */
+.heading {
+    text-align: center;
+    margin: 20px 0;
+}
+
+/* Products Title */
+.products-tittle {
+    font-size: 26px;
+    font-weight: bold;
+    color: #a9afc3;
+    margin-bottom: 50px;
+}
+
+/* List of elements */
+.list-elements {
+    display: flex;
+    justify-content: center;
+}
+
+/* Unordered list */
+.un-order {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin-bottom: 70px;
+    gap: 100px;
+    flex-wrap: wrap; /* Add wrap to prevent overflow on smaller screens */
+}
+
+.first,
+.second {
+    font-size: 1rem;
+    color: #a9afc3;
+    cursor: pointer;
+    transition: color 0.3s;
+    padding: 5px 16px;
+    border-radius: 7px;
+}
+
+.first {
+    color: white;
+    background-color: #FF0000;
+}
+
+/* Hover effects */
+.first:hover,
+.second:hover {
+    color: white;
+    background-color: #FF0000;
+}
+
+/* Highlight selected text */
+::selection {
+    background-color: #FF0000;
+    color: white;
+}
+
+/* Responsive styles */
+@media (max-width: 1024px) {
+    /* Larger tablets */
+    .un-order {
+        gap: 50px; /* Reduce the gap */
+    }
+
+    .first,
+    .second {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Tablets and small screens */
+    .products-tittle {
+        font-size: 24px;
+    }
+
+    .un-order {
+        gap: 30px; /* Reduce gap for small screens */
+        flex-wrap: wrap;
+    }
+
+    .first,
+    .second {
+        font-size: 14px;
+        padding: 5px 12px; /* Smaller padding for better fit */
+    }
+}
+
+@media (max-width: 480px) {
+    /* Mobile phones */
+    .products-tittle {
+        font-size: 20px; /* Reduce font size on mobile */
+    }
+
+    .un-order {
+        flex-direction: column; /* Stack items vertically */
+        gap: 20px; /* Reduce gap */
+    }
+
+    .first,
+    .second {
+        font-size: 12px;
+        padding: 5px 10px;
+    }
+}
