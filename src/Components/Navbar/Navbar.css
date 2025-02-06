@@ -1,64 +1,120 @@
-/* General styles */
 body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    /* background: black; */
-  }
-  
-  .navbar-container {
-    display: flex;
-    flex-direction: column;
-    background-color: #141414;
-    padding: 10px 20px;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  padding-top: 80px;
+}
 
-    /* position: fixed; Fix the navbar to the top */
-    /* top: 0; Stay at the top */
-    /* left: 0; Align to the left edge */
-    /* width: 100%; Make it full width */
-    /* z-index: 1000; Ensure it's on top of other content */
-     /* Optional: Background color for the navbar */
-    /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); Optional: Add some shadow to the navbar */
-  }
-  
-  /* Top navbar */
-  .navbar-top {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .navbar-brand-store {
-    font-size: 26px;
-    font-weight: bold;
-    color: #a9afc3;
-    cursor: pointer;
-  }
-  
+.navbar-container {
+  display: flex;
+  flex-direction: column;
+  background-color: #141414;
+  padding: 10px 20px;
+  /* navbar to be fixed */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgbs(0. 0, 0, 0.1);
+}
+
+/* Top navbar */
+.navbar-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  /*  */
+  padding: 10px 20px;
+}
+
+.navbar-brand-store {
+  font-size: 26px;
+  font-weight: bold;
+  color: #a9afc3;
+  cursor: pointer;
+}
+
+.navbar-icons {
+  display: flex;
+  gap: 20px;
+}
+
+.icon-link-search,
+.icon-link-cart {
+  color: #a9afc3;
+  text-decoration: none;
+  font-size: 18px;
+  cursor: pointer;
+  margin-right: 20px;
+  align-items: center;
+}
+
+.cart-count {
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  padding: 2px 6px;
+  font-size: 12px;
+  position: absolute;
+  top: -10px;
+  right: -10px;
+}
+
+/* Search click handle */
+.search-input-container {
+  margin-top: 10px;
+}
+
+input[type="text"] {
+  padding: 5px;
+  width: 200px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+}
+
+input[type="text"]:focus {
+  border-color: #000;
+}
+
+
+/* cart modal */
+/* Navbar.css */
+.cart-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1001;
+}
+
+.cart-modal-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 500px;
+}
+
+
+/* Responsive design */
+@media (max-width: 768px) {
   .navbar-icons {
-    display: flex;
-    gap: 74px;
+    /* gap: 74px; */
+    padding: 10px;
   }
-  
-  .icon-link-search {
-    color: #a9afc3;
-    text-decoration: none;
-    font-size: 18px;
-    cursor: pointer;
-    /* margin-right: 20px; */
+  .navbar-icons {
+    gap: 10px;
   }
+  .navbar-brand-store {
+    font-size: 1.2rem;
+  }
+}
 
-  .icon-link-cart {
-    color: #a9afc3;
-    text-decoration: none;
-    font-size: 18px;
-    cursor: pointer;
-    /* margin-right: 20px; */
-  }
-  
-  
-  /* Responsive design */
-  @media (max-width: 768px) {
-    .navbar-icons {
-      gap: 74px;
-    }
-    }
+
